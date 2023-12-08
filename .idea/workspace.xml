@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa3bb349-6ed2-4609-bee8-bf46d0790f12" name="Changes" comment="Small modification to test 8">
+    <list default="true" id="fa3bb349-6ed2-4609-bee8-bf46d0790f12" name="Changes" comment="Tests 10 and 11 completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examreview/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examreview/Student.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/examreview/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/examreview/Tester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1702056048651</updated>
       <workItem from="1702056049283" duration="1272000" />
-      <workItem from="1702057339545" duration="14578000" />
+      <workItem from="1702057339545" duration="15237000" />
     </task>
     <task id="LOCAL-00001" summary="Added additional tests">
       <option name="closed" value="true" />
@@ -131,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702075629649</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Tests 10 and 11 completed">
+      <option name="closed" value="true" />
+      <created>1702076471501</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702076471501</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +149,7 @@
     <MESSAGE value="Json file added" />
     <MESSAGE value="Test 8 completed" />
     <MESSAGE value="Small modification to test 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small modification to test 8" />
+    <MESSAGE value="Tests 10 and 11 completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests 10 and 11 completed" />
   </component>
 </project>

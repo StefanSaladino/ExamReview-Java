@@ -87,12 +87,23 @@ public class Tester {
         System.out.println(bestStudent);
 //11. Create a new thread that will calculate who the worst student is.
 //    The worst student is the student with the lowest average grade.
-        Student worstStudent = students.get(0);
-        for(Student student: students){
-            if(student.getAvgGrade()<worstStudent.getAvgGrade()){
-                worstStudent = student;
-            }
-        }
-        System.out.println(worstStudent);
+        Thread worstStudentThread = new Thread("worstStudentThread") {
+            @Override
+            public void run() {
+                    try {
+                        Student worstStudent = students.get(0);
+                        for(Student student: students){
+                            if(student.getAvgGrade()<worstStudent.getAvgGrade()){
+                                worstStudent = student;
+                            }
+                        }
+                        System.out.println(worstStudent);
+                    } catch (RuntimeException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                }
+        };
+        worstStudentThread.start();
     }
 }
