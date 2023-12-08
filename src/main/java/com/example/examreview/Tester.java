@@ -59,7 +59,7 @@ public class Tester {
 //8. What is the average grade for students that have completed the COMP1113 course?
 //   Show the result to 2 decimal places
         ArrayList <Course> comp1113Grades = new ArrayList<>();
-        int sum=0;
+        double sum=0;
 
         for (Student student : students) {
             List <Course> courses = student.getCourses();
@@ -70,9 +70,9 @@ public class Tester {
                 }
             }
         }
-        int totalNumberOfGrades = comp1113Grades.size();
+        double totalNumberOfGrades = comp1113Grades.size();
         double avgGradeComp1113 = sum/totalNumberOfGrades;
-        System.out.printf("Average grade in Comp 1113: %d / %d = %.2f", sum, totalNumberOfGrades, avgGradeComp1113);
+        System.out.printf("Average grade in Comp 1113: %.2f / %.2f = %.2f", sum, totalNumberOfGrades, avgGradeComp1113);
 
 
 //9. What is the average grade for students that have completed the COMP1113 course?
