@@ -72,13 +72,27 @@ public class Tester {
         }
         double totalNumberOfGrades = comp1113Grades.size();
         double avgGradeComp1113 = sum/totalNumberOfGrades;
-        System.out.printf("Average grade in Comp 1113: %.2f / %.2f = %.2f", sum, totalNumberOfGrades, avgGradeComp1113);
+        System.out.printf("Average grade in Comp 1113: %.2f / %.2f = %.2f%n", sum, totalNumberOfGrades, avgGradeComp1113);
 
 
 //9. What is the average grade for students that have completed the COMP1113 course?
 //   Create the solution using a Stream and show it accurate 2 decimal places.
 //10. Who is the best student?  Find the student with the highest average grade.
+        Student bestStudent = students.get(0);
+        for(Student student: students){
+            if(student.getAvgGrade()>bestStudent.getAvgGrade()){
+                bestStudent = student;
+            }
+        }
+        System.out.println(bestStudent);
 //11. Create a new thread that will calculate who the worst student is.
 //    The worst student is the student with the lowest average grade.
+        Student worstStudent = students.get(0);
+        for(Student student: students){
+            if(student.getAvgGrade()<worstStudent.getAvgGrade()){
+                worstStudent = student;
+            }
+        }
+        System.out.println(worstStudent);
     }
 }

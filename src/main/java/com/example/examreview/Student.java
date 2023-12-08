@@ -40,7 +40,7 @@ public class Student {
     private ArrayList<Course> courses;
 
     @Override
-    public String toString() {return String.format("%s- %s- %s", firstName, studentNum, courses);}
+    public String toString() {return String.format("%s- %s- %s%nStudent average = %.1f%n", firstName, studentNum, courses, getAvgGrade());}
 
     public double getAvgGrade()
     {
