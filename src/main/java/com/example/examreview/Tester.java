@@ -25,7 +25,7 @@ public class Tester {
                     comp1008Students.add(student);
             }
         }
-        System.out.printf("Number of students passing COMP1008: %d%n", comp1008Students.size());
+        System.out.printf("%nNumber of students passing COMP1008: %d%n", comp1008Students.size());
 
         int fourPlusCourses = 0;
         for (Student student : students) {
@@ -38,7 +38,7 @@ public class Tester {
                 fourPlusCourses++;
             }
         }
-        System.out.printf("No of students taking 4 or more courses: %d%n", fourPlusCourses);
+        System.out.printf("%nNo of students taking 4 or more courses: %d%n", fourPlusCourses);
 
         int fourOrMoreCoursePassingStudents = 0;
         for (Student student : students) {
@@ -53,7 +53,7 @@ public class Tester {
                 fourOrMoreCoursePassingStudents++;
         }
 
-        System.out.printf("Number of students passing at least four courses: %d%n", fourOrMoreCoursePassingStudents);
+        System.out.printf("%nNumber of students passing at least four courses: %d%n", fourOrMoreCoursePassingStudents);
 
 
 //8. What is the average grade for students that have completed the COMP1113 course?
@@ -72,7 +72,7 @@ public class Tester {
         }
         double totalNumberOfGrades = comp1113Grades.size();
         double avgGradeComp1113 = sum/totalNumberOfGrades;
-        System.out.printf("Average grade in Comp 1113: %.2f / %.2f = %.2f%n", sum, totalNumberOfGrades, avgGradeComp1113);
+        System.out.printf("%nAverage grade in Comp 1113: %.2f / %.2f = %.2f%n", sum, totalNumberOfGrades, avgGradeComp1113);
 
 
 //9. What is the average grade for students that have completed the COMP1113 course?
@@ -84,7 +84,7 @@ public class Tester {
                 bestStudent = student;
             }
         }
-        System.out.println(bestStudent);
+        System.out.println("\nBest student: " + bestStudent);
 //11. Create a new thread that will calculate who the worst student is.
 //    The worst student is the student with the lowest average grade.
         Thread worstStudentThread = new Thread("worstStudentThread") {
@@ -97,7 +97,7 @@ public class Tester {
                                 worstStudent = student;
                             }
                         }
-                        System.out.println(worstStudent);
+                        System.out.println("\nWorst Student: " + worstStudent);
                     } catch (RuntimeException e) {
                         throw new RuntimeException(e);
                     }

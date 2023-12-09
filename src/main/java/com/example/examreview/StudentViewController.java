@@ -7,7 +7,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HelloController {
+public class StudentViewController {
 
     @FXML
     private TableColumn<Student, String> lNameColumn;
@@ -45,6 +45,8 @@ public class HelloController {
         avgColumn.setCellValueFactory(new PropertyValueFactory<>("formattedAvgGrade"));
 
         tableView.getItems().addAll(allStudents);
+
+        updateLabel();
 
         searchBar.textProperty().addListener((observableValue, oldValue, searchTerm) -> {
             tableView.getItems().clear();
