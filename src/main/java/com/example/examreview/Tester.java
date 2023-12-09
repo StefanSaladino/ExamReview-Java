@@ -3,6 +3,7 @@ package com.example.examreview;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Tester {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -77,6 +78,22 @@ public class Tester {
 
 //9. What is the average grade for students that have completed the COMP1113 course?
 //   Create the solution using a Stream and show it accurate 2 decimal places.
+        List<Course> comp1113StreamGrades = students.stream()
+                .flatMap(student -> student.getCourses().stream())
+                .filter(course -> course.getCourseCode().contains("COMP1113"))
+                .collect(Collectors.toList());
+
+        double streamSum = comp1113StreamGrades.stream()
+                .mapToDouble(Course::getGrade)
+                .sum();
+
+        double totalStreamNumberOfGrades = comp1113Grades.size();
+        double avgStreamGradeComp1113 = totalNumberOfGrades > 0 ? streamSum / totalNumberOfGrades : 0.0;
+
+        System.out.printf("%nAverage grade in Comp 1113 (using a stream): %.2f / %.2f = %.2f%n", streamSum, totalStreamNumberOfGrades, avgStreamGradeComp1113);
+
+
+
 //10. Who is the best student?  Find the student with the highest average grade.
         Student bestStudent = students.get(0);
         for(Student student: students){
@@ -97,7 +114,7 @@ public class Tester {
                                 worstStudent = student;
                             }
                         }
-                        System.out.println("\nWorst Student: " + worstStudent);
+                        System.out.println("Worst Student: " + worstStudent);
                     } catch (RuntimeException e) {
                         throw new RuntimeException(e);
                     }
