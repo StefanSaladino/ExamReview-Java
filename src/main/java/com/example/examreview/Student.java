@@ -40,7 +40,7 @@ public class Student {
     private ArrayList<Course> courses;
 
     @Override
-    public String toString() {return String.format("%s- %s- %s%nStudent average = %.1f%n", firstName, studentNum, courses, getAvgGrade());}
+    public String toString() {return String.format("%s %s- %s- %s%nStudent average = %.1f%n", firstName, lastName, studentNum, courses, getAvgGrade());}
 
     public double getAvgGrade()
     {
@@ -80,8 +80,8 @@ public class Student {
         //contains is a case sensitive search for a substring
         return (firstName.toLowerCase().contains(searchTerm) ||
                 Integer.toString(studentNum).contains(searchTerm) ||
-                lastName.contains(searchTerm)) ||
+                lastName.contains(searchTerm) ||
                 email.contains(searchTerm) ||
-                avgGrade.contains(searchTerm);
+                avgGrade.contains(searchTerm));
     }
 }
